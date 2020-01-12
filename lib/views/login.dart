@@ -17,7 +17,7 @@ class LoginPage extends StatelessWidget {
             AppCard(
               child: Text(
                 "logo",
-                  style: TextStyle(fontSize: 32.0),
+                  style: TextStyle(fontSize: 28.0),
                   textAlign: TextAlign.center,
                 ),
               ),

@@ -19,7 +19,7 @@ class BudgetPage extends StatelessWidget {
               AppCard(
                 child: Text(
                   "your budget",
-                  style: TextStyle(fontSize: 32.0),
+                  style: TextStyle(fontSize: 28.0),
                   textAlign: TextAlign.center,
                 ),
               ),
@@ -34,7 +34,7 @@ class BudgetPage extends StatelessWidget {
                       ),
                       Container(
                           width: double.infinity,
-                          margin: EdgeInsets.only(top: 20.0),
+                          margin: EdgeInsets.only(top: 5.0),
                           child: FlatButton(
                             color: Colors.green,
                             textColor: Colors.white,
