@@ -7,6 +7,7 @@ import 'package:swipeit/ui/widget/dragTargetWidgetRight.dart';
 import 'package:swipeit/ui/widget/dragTargetWidgetUp.dart';
 import 'package:swipeit/views/data.dart';
 import 'package:provider/provider.dart';
+import 'package:swipeit/views/report.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -18,11 +19,16 @@ class HomePage extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () {
-          Provider.of<Data>(context).initializeDraggableList();
-          Provider.of<Data>(context).changeSuccessDrop(false);
+//          Provider.of<Data>(context).initializeDraggableList();
+//          Provider.of<Data>(context).changeSuccessDrop(false);
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => ReportPage()),
+          );
         },
         elevation: 20.0,
-        label: Text('Reset'),
+//        label: Text('Reset'),
+        label: Text('Next'),
       ),
       body: SingleChildScrollView(
         child: Container(

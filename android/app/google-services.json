@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "577391873016",
+    "firebase_url": "https://spent-a246c.firebaseio.com",
+    "project_id": "spent-a246c",
+    "storage_bucket": "spent-a246c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:577391873016:android:ef52ffb39eab68633ba40d",
+        "android_client_info": {
+          "package_name": "com.shehacks4.spent"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "577391873016-ijo6inuapi61i3rl4saffcr863uem3fh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2-ppNAqwJoDoe6NOlHDLy3cewe_ikYCU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "577391873016-ijo6inuapi61i3rl4saffcr863uem3fh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -4,13 +4,14 @@ import 'package:swipeit/models/acct.dart';
 import 'package:swipeit/repo/firestore.dart';
 import 'package:swipeit/views/categoryBudget.dart';
 
-class BudgetPage extends StatelessWidget {
-  final String email;
+class ReportPage extends StatelessWidget {
+  final Account acct;
   final myController = TextEditingController();
-  BudgetPage({Key key, @required this.email}) : super(key: key);
+  ReportPage({Key key, @required this.acct}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final total = getTotal(acct);
     return Scaffold(
         body: Container(
           child: Column(
@@ -18,12 +19,12 @@ class BudgetPage extends StatelessWidget {
             children: <Widget>[
               AppCard(
                 child: Text(
-                  "your budget",
+                  "Total Spent: \$86.4",
                   style: TextStyle(fontSize: 32.0),
                   textAlign: TextAlign.center,
                 ),
               ),
-              AppCard(
+              /*AppCard(
                 child: Container(
                   margin: EdgeInsets.only(top: 10.0),
                   child: Column(
@@ -39,11 +40,7 @@ class BudgetPage extends StatelessWidget {
                             color: Colors.green,
                             textColor: Colors.white,
                             onPressed: (){
-                              updateAcctRecord(Account(email: email, budget: double.parse(myController.text), spent: 0));
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(builder: (context) => CatBudgetPage()),
-                              );
+
                             },
                             child: Text("Confirm"),
 
@@ -53,7 +50,7 @@ class BudgetPage extends StatelessWidget {
                   ),
 
                 ),
-              ),
+              ),*/
             ],
           ),
         ));

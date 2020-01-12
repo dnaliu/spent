@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:swipeit/common/app_Card.dart';
+import 'package:swipeit/main1.dart';
 import 'package:swipeit/ui/view/home.dart';
 
 class CatBudgetPage extends StatelessWidget {
@@ -52,7 +53,7 @@ class CatBudgetPage extends StatelessWidget {
                             onPressed: (){
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (context) => HomePage()),
+                                MaterialPageRoute(builder: (context) => MyApp1()),
                               );
                             },
                             child: Text("Confirm"),

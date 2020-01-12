@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:swipeit/common/app_Card.dart';
+import 'package:swipeit/repo/firestore.dart';
 import 'package:swipeit/views/budget.dart';
 
 class LoginPage extends StatelessWidget {
-  const LoginPage({Key key}) : super(key: key);
+  final myController = TextEditingController();
+  LoginPage({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -26,6 +28,7 @@ class LoginPage extends StatelessWidget {
                     children: <Widget>[
                       TextFormField(
                         decoration: InputDecoration(labelText: "Email"),
+                        controller: myController,
                   ),
                   TextFormField(
                     decoration: InputDecoration(labelText: "Password"),
@@ -37,9 +40,10 @@ class LoginPage extends StatelessWidget {
                           color: Colors.green,
                           textColor: Colors.white,
                           onPressed: (){
+                            createAcctRecord(myController.text);
                             Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) => BudgetPage()),
+                              MaterialPageRoute(builder: (context) => BudgetPage(email: myController.text)),
                             );
                           },
                               child: Text("Login"),

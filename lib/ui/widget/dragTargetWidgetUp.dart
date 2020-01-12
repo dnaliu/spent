@@ -1,6 +1,7 @@
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:swipeit/models/cardItem.dart';
+import 'package:swipeit/repo/firestore.dart';
 import 'package:swipeit/ui/resources/colors.dart';
 import 'package:swipeit/ui/resources/strings.dart';
 import 'package:provider/provider.dart';
@@ -14,6 +15,7 @@ class DragTargetWidgetUp extends StatelessWidget {
     return DragTarget(onWillAccept: (data) {return true;},
         onAccept: (CardItem data) {
           print('Category: $CATEGORY_1');
+          createRecord(data, CATEGORY_1);
           if (Provider.of<Data>(context).itemsList.length >= 1) {
             Provider.of<Data>(context).removeLastItem();
             Provider.of<Data>(context).changeSuccessDrop(true);

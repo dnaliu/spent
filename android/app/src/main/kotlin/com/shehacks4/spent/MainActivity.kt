@@ -1,4 +1,4 @@
-package com.shehacks4.swipeit
+package com.shehacks4.spent
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity
