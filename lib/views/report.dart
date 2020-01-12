@@ -12,6 +12,7 @@ class ReportPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final total = getTotal(acct);
+    final msg = 86.4 > acct.budget ? "You went over budget :( Try setting a more realistic budget next time!" : "You succeeded in keeping within the budget! Good job!";
     return Scaffold(
         body: Container(
           child: Column(
@@ -21,6 +22,13 @@ class ReportPage extends StatelessWidget {
                 child: Text(
                   "Total Spent: \$86.4",
                   style: TextStyle(fontSize: 32.0),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+              AppCard(
+                child: Text(
+                  msg,
+                  style: TextStyle(fontSize: 18.0),
                   textAlign: TextAlign.center,
                 ),
               ),

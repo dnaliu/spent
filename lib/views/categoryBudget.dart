@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:swipeit/common/app_Card.dart';
 import 'package:swipeit/main1.dart';
-import 'package:swipeit/ui/view/home.dart';
+import 'package:swipeit/models/acct.dart';
 
 class CatBudgetPage extends StatelessWidget {
-  const CatBudgetPage({Key key}) : super(key: key);
+  final Account acct;
+  const CatBudgetPage({Key key, @required this.acct}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -53,7 +54,7 @@ class CatBudgetPage extends StatelessWidget {
                             onPressed: (){
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (context) => MyApp1()),
+                                MaterialPageRoute(builder: (context) => MyApp1(acct: acct)),
                               );
                             },
                             child: Text("Confirm"),

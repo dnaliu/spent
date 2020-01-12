@@ -39,10 +39,11 @@ class BudgetPage extends StatelessWidget {
                             color: Colors.green,
                             textColor: Colors.white,
                             onPressed: (){
-                              updateAcctRecord(Account(email: email, budget: double.parse(myController.text), spent: 0));
+                              Account acct = new Account(email: email, budget: double.parse(myController.text), spent: 0);
+                              updateAcctRecord(acct);
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (context) => CatBudgetPage()),
+                                MaterialPageRoute(builder: (context) => CatBudgetPage(acct: acct)),
                               );
                             },
                             child: Text("Confirm"),

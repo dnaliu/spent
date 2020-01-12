@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:swipeit/models/acct.dart';
 import 'package:swipeit/ui/resources/strings.dart';
 import 'package:swipeit/ui/widget/cardStackWidget.dart';
 import 'package:swipeit/ui/widget/dragTargetWidgetDown.dart';
 import 'package:swipeit/ui/widget/dragTargetWidgetLeft.dart';
 import 'package:swipeit/ui/widget/dragTargetWidgetRight.dart';
 import 'package:swipeit/ui/widget/dragTargetWidgetUp.dart';
-import 'package:swipeit/views/data.dart';
-import 'package:provider/provider.dart';
 import 'package:swipeit/views/report.dart';
 
 class HomePage extends StatelessWidget {
+  final Account acct;
+  const HomePage({Key key, @required this.acct}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    Size media = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
         title: Text(APP_BAR_TITLE),
@@ -23,7 +23,7 @@ class HomePage extends StatelessWidget {
 //          Provider.of<Data>(context).changeSuccessDrop(false);
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => ReportPage()),
+            MaterialPageRoute(builder: (context) => ReportPage(acct: acct)),
           );
         },
         elevation: 20.0,
